@@ -97,7 +97,7 @@ class player {
           );
         else showMessage("TRY AGAIN", "the contest is draw");
         player.masterReset();
-      }, 310);
+      }, 50);
     }
   }
 
@@ -125,7 +125,7 @@ class player {
       m.value = matches;
       showMessage("HURRAY", `${p.name} won...🎉🎉🎉🎉🎉`);
       player.matchReset();
-    }, 300);
+    }, 50);
   }
 
   static clickCheck(px, clicked, py) {
@@ -198,7 +198,7 @@ function myFunction(event) {
       m.value = matches;
       showMessage("RESULT", "match draw...");
       player.matchReset();
-    }, 300);
+    }, 50);
     player.checkMatches();
     return;
   }
