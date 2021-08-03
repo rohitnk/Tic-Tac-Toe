@@ -151,10 +151,11 @@ class player {
       px.playerWin++;
       player.hurray(px);
       player.checkMatches();
-      return;
+      return true;
     }
     player.flip();
     changeHoverBackground();
+    return false;
   }
 }
 
@@ -187,10 +188,10 @@ function myFunction(event) {
 
   if (player1) {
     if (player.clickCheck(p1, clicked, p2)) return;
-    player.makeMove(p1, toChange);
+    if (player.makeMove(p1, toChange)) return;
   } else {
     if (player.clickCheck(p2, clicked, p1)) return;
-    player.makeMove(p2, toChange);
+    if (player.makeMove(p2, toChange)) return;
   }
   if (player.count === 9) {
     matches--;
